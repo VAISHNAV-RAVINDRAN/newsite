@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" type="text/css" href="../styles/login.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<div class="container">
+<h1>Login</h1>
+<form>
+<div class="form-input">
+<input type="text" id="username" name="Username" required placeholder="Username">
+</div>
+<div class="form-input">
+<input type="password" id="password" name="password" required placeholder="Password">
+<span toggle="#password" class="material-icons toggle-password">visibility_off</span>
+</div>
+<div class="form-input">
+<a href="ForgetPassword.html">
+Forgot Password ?
+</a>
+</div>
+<button type="submit" id="loginbtn">Login</button>
+</form>
+<p>Don't Have An Account? 
+<a href="signup.html">
+Sign up
+</a>
+</p>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+</script>
+<script>
+$(document).ready(function(){
+$('.toggle-password').on('click', function(){
+$(this).toggleClass('active');
+var password = $(this).attr('toggle');
+var input = $(password);
+if(input.attr('type') === 'password'){
+input.attr('type', 'text');
+$(this).text('visibility');
+} 
+else{
+input.attr('type', 'password');
+$(this).text('visibility_off');
+}
+});
+});
+</script>
+<script type="module" src="../scripts/login.js"></script>
+</body>
+</html>

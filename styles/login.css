@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color:transparent;
+    border-radius: 10px;
+    margin: 100px auto;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+}
+
+.form-input {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-input input {
+    background-color:lavender;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 15px;
+    width: 100%;
+    font-weight:bold;
+    outline:none;
+    caret-color:#4CAF50;
+}
+
+.form-input input:focus,
+.form-input{
+    color: #333;
+    font-size: 16px;
+    top: 0;
+    font-weight:bold;
+    outline:none;
+    caret-color:#4CAF50;
+}
+
+.form-input .material-icons {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);        
+}
+
+.form-input .toggle-password {
+    font-size: 24px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 12px;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    font-weight:bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+p {
+    margin-top: 20px;
+    font-weight:bold;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 50px auto;
+        padding: 20px;
+    }
+}

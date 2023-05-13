@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<title>Sign Up</title>
+<link rel="stylesheet" href="../styles/signup.css">
+</head>
+<body>
+<div class="container">
+<form id="form">
+<h1>Sign Up</h1>
+<div class="form-control">
+<input type="text" id="username" name="username" required placeholder="Username">
+<span class="error">Username is already taken
+</span>
+</div>
+<div class="form-control">
+<input type="email" id="email" name="email" required placeholder="Email ID">
+<span class="error">Invalid email address
+</span>
+</div>
+<div class="form-control">
+<input type="password" id="password" name="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" placeholder="Password">
+<span class="error">Password must contain at least 8 characters and at least one letter and one number</span>
+</div>
+<div class="form-control">
+<input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm Password">
+<span class="error">Passwords do not match
+</span>
+</div>
+<div class="password-toggler">
+<input type="checkbox" name="toggle-password" id="toggle-password">&nbsp;&nbsp;
+<label for="toggle-password">Show Passwords
+</label>
+</div>
+<button type="submit" id="signup">Sign Up</button>
+<p>Already have an account ? 
+<a href="login.html">Login</a>
+</p>
+</form>
+</div>
+<script type="module" src="../scripts/signup.js"></script>
+</body>
+</html>
